@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify ,request
 from database import result_as_dict
 
 STATS = result_as_dict
@@ -7,9 +7,14 @@ TOP = 10
 SECOND = 65
 app = Flask(__name__)
 
-# @app.route("/")
-# def helloworld():
-#     return "hlwef"
+@app.route("/login-register")
+def login():
+    return render_template('index.html')
+
+@app.route("/dashboard/apply")
+def helloworld():
+    data = request.args
+    return jsonify(data)
 
 @app.route("/")
 def hello():

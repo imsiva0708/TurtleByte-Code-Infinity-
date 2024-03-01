@@ -35,13 +35,14 @@
 <body>
     <div class="container">
 
-        <form>
+        <form action="/dashboard/apply">
             <label for="steps">Enter number of steps...</label> <br>
-            <input type="number", placeholder="6000"><br>
+            <input type="number" name="steps" placeholder="6000"><br>
             <label for="calories">Enter number of calories</label><br>
-            <input type="number" placeholder="900" ><br>
+            <input type="number" name="calories" placeholder="900" ><br>
             <label for="minutes">Minutes of workout</label><br>
-            <input type="number" placeholder="90">
+            <input type="number" name='workout_time' placeholder="90">
+            <input type="submit">
             <div id="chartContainer" style="height: 300px; width: 100%;">
             </div>
         </form>
@@ -51,6 +52,8 @@ TODO PROGRESS BAR
             <th>Sno.</th>
             <th>User</th>
             <th>Steps</th>
+            <th>Calories</th>
+            <th>Workout_Time</th>
             <div>
                 {% for ss in stats %}
                 <tr>
