@@ -44,9 +44,20 @@
             <div id="chartContainer" style="height: 300px; width: 100%;">
             </div>
         </form>
-        <table>
-            <tr>asf</tr><tbody>sdfasdfasdf</tbody> <br>
-            <tr>sdfja</tr>
+        <table class = 'table table striped'>
+            <tr>
+            <th>Sno.</th>
+            <th>User</th>
+            <th>Steps</th>
+            <div>
+                {% for ss in stats %}
+                <tr>
+                    <td>{{ss["sno"]}}</td>
+                    <td>{{ss["user"]}}</td>
+                    <td>{{ss['steps']}}</td>
+                </tr>
+                {% endfor %}
+            </div>
         </table>
     </div>
 </body>
