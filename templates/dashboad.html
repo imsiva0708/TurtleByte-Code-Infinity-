@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <script type="text/javascript">
+        window.onload = function () {
+            var dps = [{x: 1, y: 10}, {x: 2, y: 20}, {x: 3, y: 6}, {x: 4, y: 10}, {x: 5, y: 10}];   //dataPoints. 
+            
+            var chart = new CanvasJS.Chart("chartContainer",{
+                title :{
+                    text: "Monthly Statistics"
+                },
+                axisX: {						
+                    title: "Days"
+                },
+                axisY: {						
+                    title: "Steps"
+        },
+        data: [{
+            type: "line",
+            dataPoints : dps
+        }]
+    });
+    
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <form>
+            <label for="steps">Enter number of steps...</label> <br>
+            <input type="number", placeholder="6000"><br>
+            <label for="calories">Enter number of calories</label><br>
+            <input type="number" placeholder="900" ><br>
+            <label for="minutes">Minutes of workout</label><br>
+            <input type="number" placeholder="90">
+            <div id="chartContainer" style="height: 300px; width: 100%;">
+            </div>
+        </form>
+        <table>
+            <tr>asf</tr><tbody>sdfasdfasdf</tbody> <br>
+            <tr>sdfja</tr>
+        </table>
+    </div>
+</body>
+</html>
