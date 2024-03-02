@@ -1,28 +1,31 @@
-from flask import Flask, render_template, jsonify ,request
-from database import result_as_dict
+from flask import Flask, render_template, redirect ,request
+from database import load_from_db, add_to_db
 
-STATS = result_as_dict
-PROGRESS = 80
-TOP = 10
-SECOND = 65
+STATS = load_from_db()
 app = Flask(__name__)
+@app.route("/")
+def home():
+    return render_template('homepage.html')
 
-@app.route("/login-register")
-def login():
-    return render_template('index.html')
 
 @app.route("/dashboard/apply")
 def helloworld():
     data = request.args
-    return jsonify(data)
+    # add_to_db(data,Name)
+    return render_template('tmp.html')
 
-@app.route("/")
+@app.route("/login-register")
+def login():
+    return render_template("index.html")
+
+@app.route("/dashboard" , methods = ['post'])
 def hello():
+    account_dict = request.form.to_dict()
+    global Name
+    Name= account_dict['name']
     return render_template('home.html',
-                           stats = STATS,
-                           top = TOP,
-                           second = SECOND,
-                           progress = PROGRESS)
+                           stats = STATS
+                           )
 
 
 if __name__ == '__main__':
