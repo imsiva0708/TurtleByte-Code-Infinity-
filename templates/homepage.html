@@ -5,44 +5,60 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     </head>
     <body style ="background-color: black;">
-        <header style="background-color:#CCFE06; color:black">
-            <div align="right">
-                <a id="home_top" href="" style="font-family:'Roboto Mono' ;font-size:24;">Home</a>
-                <a id="events_top"  href="" style="font-family:'Roboto Mono' ;font-size:24;">Events</a>
-                <a id="about_top"  href="" style="font-family:'Roboto Mono' ;font-size:24;">About</a>
-                <a id="contact_top"  href="" style="font-family:'Roboto Mono' ;font-size:24;">Contact Us</a>
-            </div>
-            <br>
-        </header>
+        <div class="container">
 
-        <main>
-            <br>
-            <div align="center"><img src="static/logoname.png" height="112" width="284"></div>
-            <div align="right"><img src="static/pic1_home.png" height="565" width="710"></div>
-            <span>
-            <p style="color: white; font-family:'Roboto Mono' ; font-size:59.8;">IT'S TIME TO </p>
-            <p style="color: #CCFE06; font-family:'Roboto Mono' ; font-size:59.8;"><b>LEVEL UP ! </b></p>
-            </span>
-            <a href="/login-register" target="_blank">
-                <!--<button style="font-family:'Titillium Web' ;font-size:14; color:white; background-color:#3806FE"><b>SIGN UP NOW</b></button>-->
-                <div><img src="static/sign_up_now1.png" height="55" width="224" title="Sign Up Now"></div>
-            </a>
-            <br>
-
-        </main>
-
-        <footer style="background-color:#CCFE06; color:black">
-            <br>
-            <div align="left">
-                <a href="" style="font-family:'Roboto Mono' ;font-size:24;">About</a>
-                <a href="" style="font-family:'Roboto Mono' ;font-size:24;">Contact Us</a>
-            </div>
-        </footer>
-    </body>
-</html>
+            <header>
+                <!-- <div align="right">
+                    <a id="home_top" href="" style="font-family:'Roboto Mono' ;font-size:24;">Home</a>
+                    <a id="events_top"  href="" style="font-family:'Roboto Mono' ;font-size:24;">Events</a>
+                    <a id="about_top"  href="" style="font-family:'Roboto Mono' ;font-size:24;">About</a>
+                    <a id="contact_top"  href="" style="font-family:'Roboto Mono' ;font-size:24;">Contact Us</a>
+                </div>
+                <br> -->
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">TurtleStride</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="/login-register">Login</a></li>
+                            <li><a href="login-register">Register</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            
+            <main>
+                <br>
+                <div align="center"><img src="static/logoname.png" height="112" width="284"></div>
+                <div align="right"><img src="static/pic1_home.png" height="565" width="710"></div>
+                <span>
+                    <p style="color: white; font-family:'Roboto Mono' ; font-size:59.8;">IT'S TIME TO </p>
+                    <p style="color: #CCFE06; font-family:'Roboto Mono' ; font-size:59.8;"><b>LEVEL UP ! </b></p>
+                </span>
+                <a href="/login-register" target="_blank">
+                    <!--<button style="font-family:'Titillium Web' ;font-size:14; color:white; background-color:#3806FE"><b>SIGN UP NOW</b></button>-->
+                    <div><img src="static/sign_up_now1.png" height="55" width="224" title="Sign Up Now"></div>
+                </a>
+                <br>
+                
+            </main>
+            
+            <footer style="background-color:#CCFE06; color:black">
+                <br>
+                <div align="left">
+                    <a href="" style="font-family:'Roboto Mono' ;font-size:24;">About</a>
+                    <a href="" style="font-family:'Roboto Mono' ;font-size:24;">Contact Us</a>
+                </div>
+            </footer>
+        </div>
+        </body>
+        </html>
