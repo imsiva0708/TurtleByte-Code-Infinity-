@@ -27,6 +27,10 @@ def hello():
                            stats = STATS
                            )
 
+@app.route("/workout.html")
+def work():
+    return render_template("workout.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
