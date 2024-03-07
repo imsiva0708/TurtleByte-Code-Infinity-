@@ -27,9 +27,13 @@ def hello():
                            stats = STATS
                            )
 
-@app.route("/workout.html")
+@app.route("/workout")
 def work():
     return render_template("workout.html")
+
+@app.route("/dietplan")
+def works():
+    return render_template("diet.html")
 
 
 if __name__ == '__main__':
